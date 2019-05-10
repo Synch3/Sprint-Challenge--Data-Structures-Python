@@ -11,6 +11,7 @@ names_2 = f.read().split("\n")  # List containing 10000 names
 f.close()
 
 duplicates = []
+namesarray = sorted(names_1)
 
 def BST(arr, target):
     low = 0
@@ -28,7 +29,7 @@ def BST(arr, target):
 
 
 for name_2 in names_2:
-    if BST(names_1, name_2) is not -1:
+    if BST(namesarray, name_2) is not -1:
         duplicates.append(name_2)
 
 
